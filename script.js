@@ -1,3 +1,21 @@
+let number = ""
+let bottomNumber = ""
+let topNumber = ""
+let operation = ""
+let numPad = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0]
+
+
+numPad.forEach(number => {
+    let keyNumbers = document.querySelector("#numpad-buttons")
+    let button = document.createElement("button")
+    // button.addEventListener("click" ,)
+    button.textContent = number
+    button.value = number
+    keyNumbers.appendChild(button)
+})
+
+
+
 function add(a, b) {
     let sum = a + b
     console.log(sum)
@@ -55,3 +73,32 @@ function power(a, b) {
     console.log(result)
 }
 power(10, 3)
+
+function operate() {
+
+    switch (operation) {
+        case "+":
+
+            break;
+
+        case "-":
+
+            break;
+
+        case "*":
+
+            break;
+
+        case "/":
+
+            break;
+
+        case "%":
+
+            break;
+
+        case "^":
+
+            break;
+    }
+}
