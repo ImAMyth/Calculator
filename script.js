@@ -163,3 +163,13 @@ function operate() {
             break;
     }
 }
+
+function addNumbersToScreen(e) {
+
+    if (number.length < 16) {
+        number += String(e.target.textContent)
+        document.querySelector(".bottom-screen").textContent = number
+    }
+
+}
+
