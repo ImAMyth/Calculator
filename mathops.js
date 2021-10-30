@@ -31,3 +31,15 @@ function getPower(element) {
 
     }
 }
+
+function isOperator(op) {
+
+    switch (op) {
+        case "+" || "-" || "*" || "/":
+            return true
+    
+        default:
+            return false
+    }
+
+}
