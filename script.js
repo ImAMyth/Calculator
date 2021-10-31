@@ -34,20 +34,19 @@ negate.addEventListener("click", negateNumber)
 numPad.appendChild(negate)
 
 function negateNumber() {
-    if (number > 0) { 
-       number = number * -1
-       document.querySelector(".bottom-screen").textContent = number
+    if (number > 0) {
+        number = String(-number)
+        document.querySelector(".bottom-screen").textContent = number
     }
     else if (number < 0) {
-       number =  number * -1
-       document.querySelector(".bottom-screen").textContent = number
+        number = String(-number)
+        document.querySelector(".bottom-screen").textContent = number
     }
-
 }
 
 let operatorPad = document.querySelector("#operator-buttons")
 
-let basicCalcButtons = ["On", "Off", "←", "C" , "(" , ")"]
+let basicCalcButtons = ["On", "Off", "←", "C", "(", ")"]
 basicCalcButtons.forEach(button => {
     let calcButtons = document.createElement("button")
     calcButtons.textContent = button
@@ -70,7 +69,7 @@ function functionalityButtons(e) {
             content.textContent = ""
             number = null
             break;
-            
+
         case "←":
             number = number.substr(0, number.length - 1)
             content.textContent = number
