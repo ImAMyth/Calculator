@@ -30,16 +30,24 @@ function addDecimalHelper() {
 
 let negate = document.createElement("button")
 negate.textContent = "+/-"
-// negate.addEventListener("click",)
+negate.addEventListener("click", negateNumber)
 numPad.appendChild(negate)
 
 function negateNumber() {
+    if (number > 0) { 
+       number = number * -1
+       document.querySelector(".bottom-screen").textContent = number
+    }
+    else if (number < 0) {
+       number =  number * -1
+       document.querySelector(".bottom-screen").textContent = number
+    }
 
 }
 
 let operatorPad = document.querySelector("#operator-buttons")
 
-let basicCalcButtons = ["On", "Off", "←", "C"]
+let basicCalcButtons = ["On", "Off", "←", "C" , "(" , ")"]
 basicCalcButtons.forEach(button => {
     let calcButtons = document.createElement("button")
     calcButtons.textContent = button
@@ -51,19 +59,34 @@ function functionalityButtons(e) {
     let content = document.querySelector(".bottom-screen")
     switch (e.target.textContent) {
         case "On":
-            content = 0
+            if (number) {
+                return false
+            }
+            content.textContent = 0
+            number = ""
             break;
 
         case "Off":
-            content = number
+            content.textContent = ""
+            number = null
             break;
-
+            
         case "←":
-            content.textContent = content.textContent.substr(0, content.textContent.length - 1)
+            number = number.substr(0, number.length - 1)
+            content.textContent = number
             break;
 
         case "C":
-            content = 0
+            content.textContent = 0
+            number = ""
+            break;
+
+        case "(":
+
+            break;
+
+        case ")":
+
             break;
     }
 }
