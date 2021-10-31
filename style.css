@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     margin: auto;
     margin-top: 100px;
-    height: 710px;
+    height: 740px;
     width: 525px;
     border: 4px solid lightgrey;
     border-radius: 15px;
@@ -61,8 +61,8 @@ h1 {
 }
 
 button {
-    width: 80px;
-    height: 90px;
+    width: 85px;
+    height: 95px;
     margin: 5px;
     font-size: 25px;
     box-shadow: 3px 3px 10px black;
@@ -75,7 +75,8 @@ button:hover {
 
 #operator-buttons button {
     width: 83px;
-    height: 56.5px;
+    height: 50px;
+    background-color: rgb(30, 73, 202);
 }
 
 #numpad-buttons {
